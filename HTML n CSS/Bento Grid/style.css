@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+main{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 350px 1fr;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas: "top-left center-up top-right"
+                         "top-left center bottom-right"
+                         "bottom-left bottom-left bottom-right"
+    ;
+    gap: 10px;
+    padding: 10px;
+}
+
+.top-left{
+    grid-area: top-left;
+    background-color: gold;
+}
+
+.bottom-left{
+    grid-area: bottom-left;
+    background-color: blue;
+}
+
+.center{
+    grid-area: center;
+    background-color: red;
+}
+
+.center-up{
+    grid-area: center-up;
+    background-color: #fff;
+}
+
+.top-right{
+    grid-area: top-right;
+    background-color: green;
+}
+
+.bottom-right{
+    grid: bottom-right;
+    background-color: gray;
+}
