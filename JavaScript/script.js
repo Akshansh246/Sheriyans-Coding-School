@@ -1,10 +1,10 @@
 let num = prompt('num btao: ');
 
 if (num === null) {
-    console.log("Cancel daba diya !!")
+    console.error("Cancel daba diya !!")
 }
 else{
     if (num.trim() === '') {
-        console.log("Bhaii dhang se likh le !!")
+        console.error("Bhaii dhang se likh le !!")
     }
 }
