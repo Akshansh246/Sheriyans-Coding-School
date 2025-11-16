@@ -1,21 +1,12 @@
-let attempts = 0
-let password = "akshubhai";
-let khulgya = false;
+let word = prompt("Kuch bolo :")
+let ycount = 0
 
-let pass = prompt("password btao !!")
-attempts++;
-if (pass === password) khulgya = true
 
-while (password !== pass) {
-    if (attempts === 3) {
-        console.error("Account Blocked");
-        break;
+while(word !== 'stop'){
+    if (word === 'yes') {
+        ycount++;
     }
-    if(pass === password) khulgya = true
-    pass = prompt("password btao !!")
-    attempts++;
+    word = prompt('kuch bolo :')
 }
 
-if (khulgya === true) {
-    console.log("Account unlocked")
-}
+console.log(`You said yes ${ycount} times !!`)
