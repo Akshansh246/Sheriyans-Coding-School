@@ -8,7 +8,7 @@ html, body {
     height:100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #000;
+    background-color: cornflowerblue;
 }
 
 main{
@@ -16,41 +16,50 @@ main{
     height: 100%;
     padding: 20px;
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
 .card{
-    width: 400px;
-    height: 530px;
-    background-color: #fff;
+    width: 350px;
+    background-color: #ffffff89;
+    backdrop-filter: blur(5px);
     padding: 20px;
     text-align: center;
     border-radius: 20px;
+    border: 2px solid white;
 }
 
 .card img{
-    height: 250px;
-    width: 250px;
+    width: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-h3{
-    font-size: 40px;
-    font-weight: 800;
-    white-space: nowrap;
-    margin-bottom: 10px;
-}
 
-h4{
-    font-size: 25px;
-    color: crimson;
-    margin-bottom: 20px;
-}
-
-p{
+h5{
     font-size: 20px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+}
+
+.btn-container button{
+    padding: 10px 30px;
+    border: none;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-container button:active{
+    scale: 0.95;
 }
