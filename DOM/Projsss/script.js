@@ -1,8 +1,14 @@
-let main = document.querySelector('main')
-let crsr = document.querySelector('.cursor')
+let elem = document.querySelectorAll('.elem')
 
-main.addEventListener('mousemove', function (val){
-    console.log(val)
-    crsr.style.top = val.y+'px'
-    crsr.style.left = val.x+'px'
+elem.forEach(function (val){
+    val.addEventListener('mousemove', function (dets){
+        val.childNodes[3].style.left = dets.x+'px'
+        val.childNodes[3].style.top = dets.y+'px'
+    })
+    val.addEventListener('mouseenter',function (){
+        val.childNodes[3].style.opacity = 1;
+    })
+    val.addEventListener('mouseleave',function (){
+        val.childNodes[3].style.opacity = 0;
+    })
 })
