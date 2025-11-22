@@ -8,58 +8,29 @@ html, body {
     height:100%;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: cornflowerblue;
+    background-color: #000;
+    color: #fff;
 }
 
 main{
-    width: 100%;
     height: 100%;
-    padding: 20px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    position: relative;
 }
 
-.card{
-    width: 350px;
-    background-color: #ffffff89;
-    backdrop-filter: blur(5px);
-    padding: 20px;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid white;
+.cursor{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    mix-blend-mode: difference;     /* mast property */
 }
 
-.card img{
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-
-h5{
-    font-size: 20px;
-}
-
-.btn-container{
-    display: flex;
-    justify-content: end;
-    margin-top: 40px;
-}
-
-.btn-container button{
-    padding: 10px 30px;
-    border: none;
-    background-color: blueviolet;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.btn-container button:active{
-    scale: 0.95;
+h1{
+    font-size: 10vw;
+    font-weight: 900;
 }
