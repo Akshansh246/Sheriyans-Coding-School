@@ -7,9 +7,7 @@
 html, body {
     height:100%;
     width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: cornflowerblue;
-    color: #000;
+    font-family: monospace;
 }
 
 main{
@@ -18,52 +16,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
 }
 
-.card{
-    height: 580px;
-    width: 430px;
-    background-color: #fff;
-    border: 2px solid black;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-}
-
-#stories{
-    width: 100%;
-    border-bottom: 2px solid #dadada;
-    padding: 10px;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-#stories::-webkit-scrollbar{
-    display: none;
-}
-
-.story{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 3px solid red;
-    overflow: hidden;
-    display: inline-block;
-    margin: 4px;
-}
-
-.story img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#full-screen{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: none;
-    background-position: center;
-    background-size: cover;
+p{
+    font-size: 60px;
+    color: white;
 }
