@@ -7,7 +7,8 @@
 html, body {
     height:100%;
     width: 100%;
-    font-family: monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 
 main{
@@ -17,9 +18,27 @@ main{
     align-items: center;
     justify-content: center;
     background-color: black;
+    anchor-name: --some-anchor;
 }
 
-p{
-    font-size: 60px;
-    color: white;
+.box{
+    padding: 20px 30px;
+    z-index: 20;
+}
+
+.box:hover{
+    anchor-name: --some-anchor;
+}
+
+.anchor{
+    background-color: grey;
+    border-radius: 20px;
+    position: absolute;
+    position-anchor: --some-anchor;
+    top: anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+    pointer-events: none;
+    transition: all 0.3s linear;
 }
