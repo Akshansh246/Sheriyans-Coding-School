@@ -34,6 +34,7 @@ main{
     background-color: rgb(56, 56, 56);
     background-size: cover;
     background-position: center;
+    transition: all 2s ease-in-out;
 }
 
 .right{
@@ -153,8 +154,9 @@ main{
 .progress-area{
     height: 6px;
     background-color: #fff;
-    width: 60vw;
+    width: 55vw;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .progress-area .progress-bar{
@@ -162,10 +164,16 @@ main{
     width: 0%;
     background-color: rgb(56, 56, 56);
     border-radius: inherit;
+    cursor: pointer;
 }
 
 .timer{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    mix-blend-mode: difference;
+}
+
+.play-name, .artist{
+    mix-blend-mode: difference;
 }

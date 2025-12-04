@@ -27,6 +27,20 @@ let songs = [
         coverImg:'https://upload.wikimedia.org/wikipedia/en/7/76/Adele_-_30.png',
         backImg:'https://nashuproar.org/wp-content/uploads/2021/11/adele-30.jpg'
     },
+    {
+        songName:'Lavender Haze',
+        artistName:'Taylor Swift',
+        url:'./music/Taylor Swift - Lavender Haze (Official Lyric Video) - TaylorSwiftVEVO.mp3',
+        coverImg:'https://i.scdn.co/image/ab67616d0000b273fa747621a53c8e2cc436dee0',
+        backImg:'https://wallpapercave.com/wp/wp13501508.jpg'
+    },
+    {
+        songName:'The 1',
+        artistName:'Taylor Swift',
+        url:'./music/the 1.mp3',
+        coverImg:'https://m.media-amazon.com/images/I/A1Q6XGXmIFL._UF350,350_QL50_.jpg',
+        backImg:'https://wallpaperaccess.com/full/3704177.jpg'
+    },
 ]
 
 const allSongs = document.querySelector('.all-songs');
@@ -39,6 +53,7 @@ const forward = document.querySelector('#forward')
 const artist = document.querySelector('#artist')
 const mainCover = document.querySelector('.main-cover')
 const progressBar = document.querySelector('.progress-bar')
+const progressArea = document.querySelector('.progress-area')
 const current = document.querySelector('.current')
 const musicDuration = document.querySelector('.duration')
 
@@ -125,6 +140,23 @@ audio.addEventListener('timeupdate', function (dets){
         let audDuration = audio.duration
         let totalMin = Math.floor(audDuration / 60);
         let totalSec = Math.floor(audDuration % 60);
+        if (totalSec < 0) {
+            totalSec = `0${currentSec}`
+        }
         musicDuration.innerText = `${totalMin}:${totalSec}`
+
     });
+    let currentMin = Math.floor(currentTime / 60);
+    let currentSec = Math.floor(currentTime % 60);
+    if (currentSec < 0) {
+        currentSec = `0${currentSec}`
+    }
+    current.innerText = `${currentMin}:${currentSec}`
+});
+
+progressArea.addEventListener('click', function (dets){
+    let progBarWidthval = progressArea.clientWidth;
+    let offSet = dets.offsetX;
+    let songDuration = audio.duration;
+    audio.currentTime = (offSet / progBarWidthval) * songDuration
 })
