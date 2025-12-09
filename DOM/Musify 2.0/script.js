@@ -38,8 +38,22 @@ let songs = [
         songName:'The 1',
         artistName:'Taylor Swift',
         url:'./music/the 1.mp3',
-        coverImg:'https://m.media-amazon.com/images/I/A1Q6XGXmIFL._UF350,350_QL50_.jpg',
-        backImg:'https://wallpaperaccess.com/full/3704177.jpg'
+        coverImg:'https://i.redd.it/folklore-official-cover-v0-zwkfmm2m7e3d1.jpg?width=3000&format=pjpg&auto=webp&s=3674b818ed8654547055ea04f0d8a4a2c5537148',
+        backImg:'https://assets.vogue.com/photos/5f19dc660f5fbd60536ced60/16:9/w_1280,c_limit/111758898_578014959541022_6137017754348788440_n.jpg'
+    },
+     {
+        songName:'Honey',
+        artistName:'Taylor Swift',
+        url:'./music/Taylor Swift - Honey (Visualizer).mp3',
+        coverImg:'https://hips.hearstapps.com/hmg-prod/images/taylor-tiny-bubbles-68accf10c7c54.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*',
+        backImg:'https://deadline.com/wp-content/uploads/2025/10/Screenshot-2025-10-05-at-7.31.13%E2%80%AFPM.png?w=890'
+    },
+    {
+        songName:'CANCELLED!',
+        artistName:'Taylor Swift',
+        url:'./music/Taylor Swift - Honey (Visualizer).mp3',
+        coverImg:'https://hips.hearstapps.com/hmg-prod/images/taylor-tiny-bubbles-68accf10c7c54.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*',
+        backImg:'https://i.redd.it/i-made-custom-taylor-swift-pc-backgrounds-today-and-wanted-v0-5bvl0sj9eblf1.jpg?width=3840&format=pjpg&auto=webp&s=8706d31849ddf86f9eff28dee7cf78cd94ee2917'
     },
 ]
 
@@ -70,7 +84,7 @@ function mainShit(){
                             <img src="${elem.coverImg}"  alt="">
                             <p>${elem.songName}</p>
                         </div>
-                        <h6>3:43</h6>
+                        <h6>${elem.artistName}</h6>
                     </div>`
     });
     
