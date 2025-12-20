@@ -1,17 +1,9 @@
-function abcd(fn){
-    fn(function(fn2){
-        fn2(function(fn4){
-            fn4(function(){
-                console.log('Hellllllll')
-            })
-        })
-    })
+const apiKey = 'a42eba58c6cc265daac3b47035c69a5a';
+
+async function getWeather(city){
+    let raw = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+    let data = await raw.json();
+    console.log(data)
 }
 
-abcd(function(fn1){
-    fn1(function (fn3){
-        fn3(function (fn5){
-            fn5()
-        })
-    })
-})
+getWeather('Bhopal');
