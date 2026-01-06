@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: quicksand;
+    font-weight: 500;
+    src: url(../public/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    font-weight: 700;
+    src: url(../public/Quicksand-Bold.ttf);
+}
+@font-face {
+    font-family: cristal;
+    src: url(../public/Le\ Cristal\ de\ Lune.ttf);
+}
+
+*{
+    font-family: quicksand;
+}
+
+html{
+    background-color: black;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
