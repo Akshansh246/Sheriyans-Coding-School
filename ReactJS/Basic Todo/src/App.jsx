@@ -6,14 +6,16 @@ const App = () => {
     const [imageURL, setImageURL] = useState('');
     const [userRole, setUserRole] = useState('');
     const [userDesc, setUserDesc] = useState('');
-    const [allUsers, setAllUsers] = useState([]);
+    
+    const localUsersData = JSON.parse(localStorage.getItem('all-users')) || []
+    const [allUsers, setAllUsers] = useState(localUsersData)
     
     function submitHandler(e){
         e.preventDefault()
         let oldUsers = [...allUsers]
         oldUsers.push({username, imageURL, userRole, userDesc})
         setAllUsers(oldUsers)
-        console.log(allUsers)
+        localStorage.setItem('all-users', JSON.stringify(oldUsers))
 
         setUsername('')
         setImageURL('')
@@ -23,8 +25,14 @@ const App = () => {
 
     function deleteHandler(idx){
         let copyUsers = [...allUsers]
-        copyUsers.splice(idx, 1)
+        const cnf = confirm('Do you want to delete this user ?');
+        if (cnf) {
+            copyUsers.splice(idx, 1)
+        }else{
+            alert('User was not deleted.')
+        }
         setAllUsers(copyUsers)
+        localStorage.setItem('all-users', JSON.stringify(copyUsers))
     }
     return (
         <div className=' h-screen text-white bg-black'>
@@ -71,7 +79,7 @@ const App = () => {
             </form>
             <div className='px-5 py-10 flex flex-wrap gap-5'>
                 {allUsers.map((elem, idx)=>{
-                    return <Card idx={idx} elem={elem} deleteHandler={deleteHandler}/>
+                    return <Card key={idx} idx={idx} elem={elem} deleteHandler={deleteHandler}/>
                 })}
             </div>
         </div>
